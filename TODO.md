@@ -1,8 +1,8 @@
 # Solar Eyez Development TODO List
 
 ## 1. Project Setup
-1.1. [ ] Initialize project structure
-1.2. [ ] Set up Python 3.10 environment
+1.1. [x] Set up Python 3.10 environment (env_solar)
+1.2. [ ] Initialize project structure
 1.3. [ ] Create requirements.txt with all dependencies
 1.4. [ ] Establish project documentation structure
 1.5. [ ] Set up testing framework (pytest)
