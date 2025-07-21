@@ -4,7 +4,7 @@
 1.1. [x] Set up Python 3.10 environment (env_solar)
 1.2. [x] Define language goals and objectives
 1.3. [x] Initialize project structure for language development
-1.4. [ ] Set up testing framework (pytest)
+1.4. [x] Set up testing framework (pytest)
 1.5. [ ] Create requirements.txt with all dependencies
     - [ ] Include testing libraries
 1.6. [ ] Establish project documentation structure
