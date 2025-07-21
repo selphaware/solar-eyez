@@ -1,0 +1,18 @@
+# Datara (D++) project dependencies
+# Pinned versions ensure consistent development environment
+
+# Core scientific stack
+numpy==2.2.6
+pandas==2.3.1
+
+# Testing
+pytest==8.4.1
+pytest-cov==6.2.1
+pytest-mock==3.14.1
+
+# Linting & static analysis
+ruff==0.12.4
+mypy==1.17.0
+
+# Optional typing helpers
+typing_extensions==4.14.1
