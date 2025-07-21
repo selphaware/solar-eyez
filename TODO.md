@@ -1,110 +1,172 @@
-# Solar Eyez Development TODO List
+# Datara (D++) Language Development TODO List
 
 ## 1. Project Setup
 1.1. [x] Set up Python 3.10 environment (env_solar)
-1.2. [ ] Initialize project structure
-1.3. [ ] Create requirements.txt with all dependencies
-1.4. [ ] Establish project documentation structure
-1.5. [ ] Set up testing framework (pytest)
-1.6. [ ] Create configuration management using environment variables
+1.2. [ ] Define language goals and objectives
+1.3. [ ] Initialize project structure for language development
+1.4. [ ] Set up testing framework (pytest)
+1.5. [ ] Create requirements.txt with all dependencies
+    - [ ] Include testing libraries
+1.6. [ ] Establish project documentation structure
+1.7. [ ] Create configuration management using environment variables
 
-## 2. Core Interpreter Module (`solar_core`)
-2.1. [ ] Implement command parsing and execution system
-2.2. [ ] Develop prompt management with dynamic updates
-2.3. [ ] Create color scheme configuration system
-2.4. [ ] Add support for multi-line input
-2.5. [ ] Implement command history and tab-completion
-2.6. [ ] Develop comprehensive help system
+## 2. Language Design and Specification
+2.1. [ ] Define core syntax and grammar for Datara (D++)
+    - [ ] Write unit tests for grammar rules
+2.2. [ ] Design type system (data types, type inference, etc.)
+    - [ ] Write unit tests for type validation
+2.3. [ ] Specify operators and expression syntax
+    - [ ] Write unit tests for operator behavior
+2.4. [ ] Define control flow structures (if/else, loops, functions)
+    - [ ] Write unit tests for control flow constructs
+2.5. [ ] Design error handling and exception mechanism
+    - [ ] Write unit tests for error cases
+2.6. [ ] Document language specification
+2.7. [ ] Create syntax highlighting rules
 
-## 3. Data Ingestion Module (`solar_io`)
-3.1. [ ] Implement CSV file reading functionality
-3.2. [ ] Add JSON file support
-3.3. [ ] Integrate Parquet file support
-3.4. [ ] Add Excel file support
-3.5. [ ] Implement SQL database connectivity via SQLAlchemy
-3.6. [ ] Create dataset management system with unique identifiers
-3.7. [ ] Develop automatic format detection
-3.8. [ ] Implement dataset listing functionality (`list_datasets` command)
-3.9. [ ] Create dataset inspection capability (`view <dataset>` command)
-3.10. [ ] Add dataset metadata display (shape, types, memory usage)
+## 3. Lexer and Parser
+3.1. [ ] Implement lexical analyzer (tokenizer) for D++ files
+    - [ ] Write unit tests for tokenization
+3.2. [ ] Develop parser for D++ syntax
+    - [ ] Write unit tests for parsing different constructs
+3.3. [ ] Create abstract syntax tree (AST) structure
+    - [ ] Write unit tests for AST generation
+3.4. [ ] Implement syntax validation
+    - [ ] Write unit tests for error detection
+3.5. [ ] Add error reporting and recovery mechanisms
+    - [ ] Write unit tests for error recovery
+3.6. [ ] Create visualization tools for parse trees
+3.7. [ ] Optimize parsing performance
+    - [ ] Write benchmarks for parsing performance
 
-## 4. Exploratory Data Analysis Module (`solar_eda`)
-4.1. [ ] Implement `describe` command for summary statistics
-4.2. [ ] Create visualization capabilities (histograms, scatter plots, boxplots)
-4.3. [ ] Develop correlation matrix function with p-values
-4.4. [ ] Add missing value analysis and reporting
-4.5. [ ] Create functionality to save outputs to files (PNG, CSV)
-4.6. [ ] Implement data preview functionality (head/tail operations)
+## 4. Interpreter and Runtime
+4.1. [ ] Develop abstract syntax tree (AST) interpreter
+    - [ ] Write unit tests for AST interpretation
+4.2. [ ] Implement symbol table and scope management
+    - [ ] Write unit tests for symbol resolution
+4.3. [ ] Create runtime environment for Datara execution
+    - [ ] Write unit tests for runtime behavior
+4.4. [ ] Build memory management system
+    - [ ] Write unit tests for memory allocation/deallocation
+4.5. [ ] Implement error handling and debugging capabilities
+    - [ ] Write unit tests for error capture and reporting
+4.6. [ ] Add support for file I/O operations
+    - [ ] Write unit tests for file operations
+4.7. [ ] Optimize runtime performance
+    - [ ] Create benchmarks for runtime operations
+4.8. [ ] Implement REPL (Read-Eval-Print Loop) environment
+    - [ ] Write integration tests for REPL functionality
 
-## 5. Feature Engineering Module (`solar_features`)
-5.1. [ ] Implement feature generation methods (polynomial, interaction terms)
-5.2. [ ] Create scaling functionality (StandardScaler, MinMaxScaler)
-5.3. [ ] Add encoding for categorical variables (one-hot, label encoding)
-5.4. [ ] Develop dataset tracking for newly created datasets
-5.5. [ ] Ensure prompt updates to reflect new datasets
-5.6. [ ] Add feature comparison visualization between original and transformed datasets
+## 5. Standard Library
+5.1. [ ] Design standard library architecture
+    - [ ] Write tests for library interface
+5.2. [ ] Implement core data structures (lists, maps, sets, etc.)
+    - [ ] Write unit tests for each data structure
+5.3. [ ] Create data manipulation functions (filter, map, reduce, etc.)
+    - [ ] Write unit tests for manipulation functions
+5.4. [ ] Develop statistical analysis functions
+    - [ ] Write unit tests with known statistical examples
+5.5. [ ] Add mathematical operations library
+    - [ ] Write unit tests for mathematical operations
+5.6. [ ] Implement string manipulation utilities
+    - [ ] Write unit tests for string operations
+5.7. [ ] Create date/time handling functions
+    - [ ] Write unit tests for date/time operations
+5.8. [ ] Build input/output utilities
+    - [ ] Write unit tests for I/O operations
 
-## 6. Machine Learning Module (`solar_ml`)
-### 6.1. Unsupervised Learning
-6.1.1. [ ] Implement clustering algorithms (KMeans, DBSCAN)
-6.1.2. [ ] Create visualization for clusters using PCA/t-SNE
+## 6. Data Science Domain Features
+6.1. [ ] Design data frame structures and operations
+    - [ ] Write unit tests for dataframe operations
+6.2. [ ] Implement statistical analysis functions and methods
+    - [ ] Write unit tests with verified statistical results
+6.3. [ ] Create data visualization capabilities
+  6.3.1. [ ] Basic plots (bar, line, scatter)
+      - [ ] Write tests for plot generation
+  6.3.2. [ ] Advanced visualizations (heatmaps, 3D plots)
+      - [ ] Write tests for complex visualizations
+6.4. [ ] Add machine learning integration
+  6.4.1. [ ] Classification algorithms
+      - [ ] Write tests with benchmark datasets
+  6.4.2. [ ] Regression algorithms
+      - [ ] Write tests with benchmark datasets
+  6.4.3. [ ] Clustering algorithms
+      - [ ] Write tests with benchmark datasets
+  6.4.4. [ ] Model evaluation utilities
+      - [ ] Write tests for metrics calculation
+6.5. [ ] Implement feature engineering utilities
+    - [ ] Write tests for feature transformations
+6.6. [ ] Add time series analysis capabilities
+    - [ ] Write tests with standard time series datasets
 
-### 6.2. Classification
-6.2.1. [ ] Implement classification algorithms (Logistic Regression, Random Forest, SVM)
-6.2.2. [ ] Add model performance metrics calculation (accuracy, precision, recall, F1)
+## 7. Development Tools
+7.1. [ ] Create D++ IDE or editor integration
+  7.1.1. [ ] Implement syntax highlighting
+      - [ ] Test with various code examples
+  7.1.2. [ ] Add code completion
+      - [ ] Test completion suggestions
+  7.1.3. [ ] Create debugging tools
+      - [ ] Test debug workflows
+7.2. [ ] Build package management system
+    - [ ] Write tests for package resolution
+7.3. [ ] Develop documentation generator
+    - [ ] Test doc generation from code
+7.4. [ ] Create profiling and optimization tools
+    - [ ] Test profiling accuracy
+7.5. [ ] Implement linting and code quality tools
+    - [ ] Test lint rule application
 
-### 6.3. Regression
-6.3.1. [ ] Implement regression algorithms (Linear Regression, Random Forest)
-6.3.2. [ ] Add model performance metrics calculation (R², MSE, MAE)
+## 8. Compilation and Performance
+8.1. [ ] Research bytecode generation options
+    - [ ] Create benchmarks for evaluation
+8.2. [ ] Implement optional static typing
+    - [ ] Write tests for type checking
+8.3. [ ] Create optimization passes for the interpreter
+    - [ ] Test before/after optimization performance
+8.4. [ ] Add parallelization capabilities for data processing
+    - [ ] Test parallelization correctness and performance
+8.5. [ ] Implement memory optimization techniques
+    - [ ] Test memory usage improvements
 
-### 6.4. Forecasting
-6.4.1. [ ] Implement time-series forecasting methods (ARIMA, Prophet)
-6.4.2. [ ] Create functionality for look-ahead predictions
-6.4.3. [ ] Add forecast plotting and evaluation
+## 9. Language Extensions
+9.1. [ ] Design plugin architecture
+    - [ ] Write tests for plugin loading
+9.2. [ ] Create extension API for third-party libraries
+    - [ ] Write tests for API integration
+9.3. [ ] Implement foreign function interface (FFI) for Python interoperability
+    - [ ] Write tests for Python interop
+9.4. [ ] Add mechanisms for custom operators
+    - [ ] Test custom operator definitions
+9.5. [ ] Create domain-specific sublanguages
+    - [ ] Write tests for sublanguage parsing
 
-### 6.5. TensorFlow Integration
-6.5.1. [ ] Create TensorFlow model building functionality
-6.5.2. [ ] Implement model training and evaluation
-6.5.3. [ ] Add support for custom model definitions
-6.5.4. [ ] Implement model saving and loading
-
-## 7. Dataset Visualization and Inspection
-7.1. [ ] Implement interactive data browsing capabilities
-7.2. [ ] Add column-specific statistics and visualizations
-7.3. [ ] Create dataset comparison functionality
-7.4. [ ] Develop data filtering and selection capabilities
-7.5. [ ] Add search functionality within datasets
-
-## 8. Reporting Module (`solar_reports`)
-8.1. [ ] Implement correlation report generation
-8.2. [ ] Create model evaluation reports (confusion matrices, ROC curves)
-8.3. [ ] Add feature importance visualization
-8.4. [ ] Develop report export functionality (Markdown, PDF, HTML)
-8.5. [ ] Create dataset summary reports
-
-## 9. Prompt System Module (`solar_prompt`)
-9.1. [ ] Create dynamic prompt update system
-9.2. [ ] Implement multi-line input support
-9.3. [ ] Add visual indicators for multi-line mode
-9.4. [ ] Develop prompt styling with active color scheme
-9.5. [ ] Add dataset indicator in prompt
-
-## 10. Testing
-10.1. [ ] Write unit tests for each module
-10.2. [ ] Create integration tests for module interactions
-10.3. [ ] Develop end-to-end tests for common workflows
-10.4. [ ] Implement test coverage reporting
+## 10. Integration and System Testing
+10.1. [ ] Build end-to-end language test suite
+10.2. [ ] Create performance benchmarking framework
+10.3. [ ] Implement property-based testing
+10.4. [ ] Add coverage reporting for language features
+10.5. [ ] Create test data generators
 
 ## 11. Documentation
-11.1. [ ] Write module-level documentation
-11.2. [ ] Create function/class-level docstrings
-11.3. [ ] Develop user guide with examples
+11.1. [ ] Write language specification document
+    - [ ] Add test validation of examples in documentation
+11.2. [ ] Create tutorials and examples
+    - [ ] Write tests to verify tutorial code works as expected
+11.3. [ ] Develop comprehensive API documentation
+    - [ ] Test doc examples as unit tests
 11.4. [ ] Add installation and setup instructions
-11.5. [ ] Create dataset viewing and manipulation guide
+    - [ ] Test installation procedures on different platforms
+11.5. [ ] Create standard library reference
+    - [ ] Verify examples in reference documentation
 
 ## 12. Future Enhancements
-12.1. [ ] Research additional data format support (HDF5, XML)
-12.2. [ ] Explore cloud storage integration (S3, Google Cloud Storage)
-12.3. [ ] Investigate distributed computing options (Dask, Spark)
-12.4. [ ] Design plugin system for custom user-defined commands
-12.5. [ ] Implement advanced dataset sharing capabilities
+12.1. [ ] Research JIT compilation options
+    - [ ] Create prototype with tests
+12.2. [ ] Explore integration with big data frameworks
+    - [ ] Write compatibility tests
+12.3. [ ] Investigate GPU/hardware acceleration
+    - [ ] Create performance comparison tests
+12.4. [ ] Design web assembly target
+    - [ ] Write browser compatibility tests
+12.5. [ ] Implement cloud execution environment
+    - [ ] Create cloud deployment tests
